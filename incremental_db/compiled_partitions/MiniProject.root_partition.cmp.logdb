@@ -1,0 +1,6 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,calculator:comb_42|lpm_mult:Mult0|mult_a8t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,calculator:comb_42|lpm_mult:Mult2|mult_a8t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,calculator:comb_42|lpm_mult:Mult1|mult_a8t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,calculator:comb_42|lpm_mult:Mult3|mult_a8t:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,calculator:comb_42|lpm_mult:Mult0|mult_a8t:auto_generated|mac_mult1,

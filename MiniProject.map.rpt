@@ -1,0 +1,1133 @@
+Analysis & Synthesis report for MiniProject
+Sun Oct 14 23:41:49 2018
+Quartus II 64-Bit Version 12.0 Build 178 05/31/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: stateMachine:comb_44
+ 13. Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult0
+ 14. Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult1
+ 15. Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult2
+ 16. Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult3
+ 17. Parameter Settings for Inferred Entity Instance: bcdToBinary:comb_40|lpm_mult:Mult0
+ 18. Parameter Settings for Inferred Entity Instance: bcdToBinary:comb_41|lpm_mult:Mult0
+ 19. lpm_mult Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "upcounter:comb_10"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Oct 14 23:41:49 2018     ;
+; Quartus II 64-Bit Version          ; 12.0 Build 178 05/31/2012 SJ Full Version ;
+; Revision Name                      ; MiniProject                               ;
+; Top-level Entity Name              ; miniProject                               ;
+; Family                             ; Cyclone II                                ;
+; Total logic elements               ; 727                                       ;
+;     Total combinational functions  ; 711                                       ;
+;     Dedicated logic registers      ; 131                                       ;
+; Total registers                    ; 131                                       ;
+; Total pins                         ; 105                                       ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0                                         ;
+; Embedded Multiplier 9-bit elements ; 8                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; miniProject        ; MiniProject        ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; pushbutton.v                     ; yes             ; User Verilog HDL File        ; D:/temp 371/pushbutton.v                                          ;         ;
+; pulseGenerator.v                 ; yes             ; User Verilog HDL File        ; D:/temp 371/pulseGenerator.v                                      ;         ;
+; bcdRegister.v                    ; yes             ; User Verilog HDL File        ; D:/temp 371/bcdRegister.v                                         ;         ;
+; upcounter.v                      ; yes             ; User Verilog HDL File        ; D:/temp 371/upcounter.v                                           ;         ;
+; seg_7.v                          ; yes             ; User Verilog HDL File        ; D:/temp 371/seg_7.v                                               ;         ;
+; operator.v                       ; yes             ; User Verilog HDL File        ; D:/temp 371/operator.v                                            ;         ;
+; operand_2_register.v             ; yes             ; User Verilog HDL File        ; D:/temp 371/operand_2_register.v                                  ;         ;
+; operand_1_register.v             ; yes             ; User Verilog HDL File        ; D:/temp 371/operand_1_register.v                                  ;         ;
+; miniProject.v                    ; yes             ; User Verilog HDL File        ; D:/temp 371/miniProject.v                                         ;         ;
+; keypad.v                         ; yes             ; User Verilog HDL File        ; D:/temp 371/keypad.v                                              ;         ;
+; frequencyDivider_1000.v          ; yes             ; User Verilog HDL File        ; D:/temp 371/frequencyDivider_1000.v                               ;         ;
+; frequencyDivider_10.v            ; yes             ; User Verilog HDL File        ; D:/temp 371/frequencyDivider_10.v                                 ;         ;
+; flipflop.v                       ; yes             ; User Verilog HDL File        ; D:/temp 371/flipflop.v                                            ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File        ; D:/temp 371/debouncer.v                                           ;         ;
+; calculator.v                     ; yes             ; User Verilog HDL File        ; D:/temp 371/calculator.v                                          ;         ;
+; bcdToBinary.v                    ; yes             ; User Verilog HDL File        ; D:/temp 371/bcdToBinary.v                                         ;         ;
+; 2_to_4_decoder.v                 ; yes             ; User Verilog HDL File        ; D:/temp 371/2_to_4_decoder.v                                      ;         ;
+; binaryToBcd.v                    ; yes             ; User Verilog HDL File        ; D:/temp 371/binaryToBcd.v                                         ;         ;
+; displayMux.v                     ; yes             ; User Verilog HDL File        ; D:/temp 371/displayMux.v                                          ;         ;
+; stateMachine.v                   ; yes             ; User Verilog HDL File        ; D:/temp 371/stateMachine.v                                        ;         ;
+; clear.v                          ; yes             ; User Verilog HDL File        ; D:/temp 371/clear.v                                               ;         ;
+; reset.v                          ; yes             ; User Verilog HDL File        ; D:/temp 371/reset.v                                               ;         ;
+; memoryStore.v                    ; yes             ; User Verilog HDL File        ; D:/temp 371/memoryStore.v                                         ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_mult.tdf       ;         ;
+; aglobal120.inc                   ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc     ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/lpm_add_sub.inc    ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/multcore.inc       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/bypassff.inc       ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altshift.inc       ;         ;
+; db/mult_a8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/temp 371/db/mult_a8t.tdf                                       ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/multcore.tdf       ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/csa_add.inc        ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/mpar_add.inc       ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/muleabz.inc        ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/mul_lfrg.inc       ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/mul_boothc.inc     ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/alt_ded_mult.inc   ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/dffpipe.inc        ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/mpar_add.tdf       ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/12.0/quartus/libraries/megafunctions/altshift.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                          ;
++---------------------------------------------+----------------------------------------+
+; Resource                                    ; Usage                                  ;
++---------------------------------------------+----------------------------------------+
+; Estimated Total logic elements              ; 727                                    ;
+;                                             ;                                        ;
+; Total combinational functions               ; 711                                    ;
+; Logic element usage by number of LUT inputs ;                                        ;
+;     -- 4 input functions                    ; 422                                    ;
+;     -- 3 input functions                    ; 124                                    ;
+;     -- <=2 input functions                  ; 165                                    ;
+;                                             ;                                        ;
+; Logic elements by mode                      ;                                        ;
+;     -- normal mode                          ; 551                                    ;
+;     -- arithmetic mode                      ; 160                                    ;
+;                                             ;                                        ;
+; Total registers                             ; 131                                    ;
+;     -- Dedicated logic registers            ; 131                                    ;
+;     -- I/O registers                        ; 0                                      ;
+;                                             ;                                        ;
+; I/O pins                                    ; 105                                    ;
+; Embedded Multiplier 9-bit elements          ; 8                                      ;
+; Maximum fan-out node                        ; frequencydivider500:comb_3|scaledClock ;
+; Maximum fan-out                             ; 74                                     ;
+; Total fan-out                               ; 2888                                   ;
+; Average fan-out                             ; 3.02                                   ;
++---------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
+; |miniProject                       ; 711 (2)           ; 131 (0)      ; 0           ; 8            ; 0       ; 4         ; 105  ; 0            ; |miniProject                                                           ;              ;
+;    |bcdRegister:comb_22|           ; 20 (20)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdRegister:comb_22                                       ;              ;
+;    |bcdToBinary:comb_40|           ; 42 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_40                                       ;              ;
+;       |lpm_mult:Mult0|             ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_40|lpm_mult:Mult0                        ;              ;
+;          |multcore:mult_core|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_40|lpm_mult:Mult0|multcore:mult_core     ;              ;
+;    |bcdToBinary:comb_41|           ; 42 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_41                                       ;              ;
+;       |lpm_mult:Mult0|             ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_41|lpm_mult:Mult0                        ;              ;
+;          |multcore:mult_core|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|bcdToBinary:comb_41|lpm_mult:Mult0|multcore:mult_core     ;              ;
+;    |binaryToBcd:comb_43|           ; 212 (212)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|binaryToBcd:comb_43                                       ;              ;
+;    |calculator:comb_42|            ; 138 (138)         ; 21 (21)      ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |miniProject|calculator:comb_42                                        ;              ;
+;       |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult0                         ;              ;
+;          |mult_a8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult0|mult_a8t:auto_generated ;              ;
+;       |lpm_mult:Mult1|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult1                         ;              ;
+;          |mult_a8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult1|mult_a8t:auto_generated ;              ;
+;       |lpm_mult:Mult2|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult2                         ;              ;
+;          |mult_a8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult2|mult_a8t:auto_generated ;              ;
+;       |lpm_mult:Mult3|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult3                         ;              ;
+;          |mult_a8t:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |miniProject|calculator:comb_42|lpm_mult:Mult3|mult_a8t:auto_generated ;              ;
+;    |debouncer:comb_18|             ; 0 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|debouncer:comb_18                                         ;              ;
+;       |flipflop:flipflop0|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|debouncer:comb_18|flipflop:flipflop0                      ;              ;
+;       |flipflop:flipflop1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|debouncer:comb_18|flipflop:flipflop1                      ;              ;
+;    |decoder2to4:comb_11|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|decoder2to4:comb_11                                       ;              ;
+;    |displayMux:comb_45|            ; 53 (53)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|displayMux:comb_45                                        ;              ;
+;    |frequencydivider10:comb_4|     ; 45 (45)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|frequencydivider10:comb_4                                 ;              ;
+;    |frequencydivider500:comb_3|    ; 43 (43)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|frequencydivider500:comb_3                                ;              ;
+;    |keypad:comb_19|                ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|keypad:comb_19                                            ;              ;
+;    |memoryStore:comb_35|           ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|memoryStore:comb_35                                       ;              ;
+;    |operand_1_register:comb_37|    ; 14 (14)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|operand_1_register:comb_37                                ;              ;
+;    |operand_2_register:comb_38|    ; 1 (1)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|operand_2_register:comb_38                                ;              ;
+;    |operatorRegister:comb_39|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|operatorRegister:comb_39                                  ;              ;
+;    |pulseGenerator:comb_21|        ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|pulseGenerator:comb_21                                    ;              ;
+;    |pushbutton:comb_20|            ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|pushbutton:comb_20                                        ;              ;
+;    |resetAll:comb_12|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|resetAll:comb_12                                          ;              ;
+;    |seg7:comb_53|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_53                                              ;              ;
+;    |seg7:comb_54|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_54                                              ;              ;
+;    |seg7:comb_55|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_55                                              ;              ;
+;    |seg7:comb_56|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_56                                              ;              ;
+;    |seg7:comb_57|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_57                                              ;              ;
+;    |seg7:comb_58|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|seg7:comb_58                                              ;              ;
+;    |stateMachine:comb_44|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|stateMachine:comb_44                                      ;              ;
+;    |upcounter:comb_10|             ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniProject|upcounter:comb_10                                         ;              ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 4           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 8           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 4           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                         ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                          ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+; memoryStore:comb_35|memoryNumber[0]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[1]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[2]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[3]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[4]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[5]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[6]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[7]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[8]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[9]                 ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[10]                ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; memoryStore:comb_35|memoryNumber[11]                ; memoryStore:comb_35|memoryNumber[11]         ; yes                    ;
+; displayMux:comb_45|muxOut0[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut0[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut0[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut0[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut1[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut1[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut1[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut1[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut2[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut2[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut2[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut2[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut3[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut3[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut3[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut3[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut4[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut4[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut4[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut4[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut5[0]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut5[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut5[2]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut5[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut6[1]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; displayMux:comb_45|muxOut6[3]                       ; displayMux:comb_45|Mux4                      ; yes                    ;
+; operatorRegister:comb_39|selectedOperator[0]        ; operatorRegister:comb_39|selectedOperator[3] ; yes                    ;
+; operatorRegister:comb_39|selectedOperator[1]        ; operatorRegister:comb_39|selectedOperator[3] ; yes                    ;
+; operatorRegister:comb_39|selectedOperator[2]        ; operatorRegister:comb_39|selectedOperator[3] ; yes                    ;
+; operatorRegister:comb_39|selectedOperator[3]        ; operatorRegister:comb_39|selectedOperator[3] ; yes                    ;
+; Number of user-specified and inferred latches = 42  ;                                              ;                        ;
++-----------------------------------------------------+----------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 131   ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 67    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                          ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------+----------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |miniProject|operand_2_register:comb_38|operand[6]  ;                            ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |miniProject|operand_1_register:comb_37|operand[3]  ;                            ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; |miniProject|bcdRegister:comb_22|Q2[0]              ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; |miniProject|bcdRegister:comb_22|Q0[1]              ;                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; |miniProject|pushbutton:comb_20|pushbuttons[1]      ;                            ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; |miniProject|calculator:comb_42|answer[12]          ;                            ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 40 LEs               ; 640 LEs                ; |miniProject|keypad:comb_19|number[0]               ;                            ;
+; 21:1               ; 11 bits   ; 154 LEs       ; 44 LEs               ; 110 LEs                ; |miniProject|calculator:comb_42|answer[3]           ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |miniProject|operand_2_register:comb_38|operand[10] ;                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |miniProject|operand_1_register:comb_37|operand[10] ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux2                ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux9                ;                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux10               ;                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux15               ;                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux16               ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux18               ;                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; |miniProject|displayMux:comb_45|Mux24               ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-----------------------------------------------------+----------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: stateMachine:comb_44 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; A              ; 00    ; Unsigned Binary                          ;
+; B              ; 01    ; Unsigned Binary                          ;
+; C              ; 10    ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult0 ;
++------------------------------------------------+------------+----------------------+
+; Parameter Name                                 ; Value      ; Type                 ;
++------------------------------------------------+------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 11         ; Untyped              ;
+; LPM_WIDTHB                                     ; 11         ; Untyped              ;
+; LPM_WIDTHP                                     ; 22         ; Untyped              ;
+; LPM_WIDTHR                                     ; 22         ; Untyped              ;
+; LPM_WIDTHS                                     ; 1          ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped              ;
+; LPM_PIPELINE                                   ; 0          ; Untyped              ;
+; LATENCY                                        ; 0          ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped              ;
+; USE_EAB                                        ; OFF        ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_a8t   ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped              ;
++------------------------------------------------+------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult1 ;
++------------------------------------------------+------------+----------------------+
+; Parameter Name                                 ; Value      ; Type                 ;
++------------------------------------------------+------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 11         ; Untyped              ;
+; LPM_WIDTHB                                     ; 11         ; Untyped              ;
+; LPM_WIDTHP                                     ; 22         ; Untyped              ;
+; LPM_WIDTHR                                     ; 22         ; Untyped              ;
+; LPM_WIDTHS                                     ; 1          ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped              ;
+; LPM_PIPELINE                                   ; 0          ; Untyped              ;
+; LATENCY                                        ; 0          ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped              ;
+; USE_EAB                                        ; OFF        ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_a8t   ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped              ;
++------------------------------------------------+------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult2 ;
++------------------------------------------------+------------+----------------------+
+; Parameter Name                                 ; Value      ; Type                 ;
++------------------------------------------------+------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 11         ; Untyped              ;
+; LPM_WIDTHB                                     ; 11         ; Untyped              ;
+; LPM_WIDTHP                                     ; 22         ; Untyped              ;
+; LPM_WIDTHR                                     ; 22         ; Untyped              ;
+; LPM_WIDTHS                                     ; 1          ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped              ;
+; LPM_PIPELINE                                   ; 0          ; Untyped              ;
+; LATENCY                                        ; 0          ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped              ;
+; USE_EAB                                        ; OFF        ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_a8t   ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped              ;
++------------------------------------------------+------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: calculator:comb_42|lpm_mult:Mult3 ;
++------------------------------------------------+------------+----------------------+
+; Parameter Name                                 ; Value      ; Type                 ;
++------------------------------------------------+------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 11         ; Untyped              ;
+; LPM_WIDTHB                                     ; 11         ; Untyped              ;
+; LPM_WIDTHP                                     ; 22         ; Untyped              ;
+; LPM_WIDTHR                                     ; 22         ; Untyped              ;
+; LPM_WIDTHS                                     ; 1          ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped              ;
+; LPM_PIPELINE                                   ; 0          ; Untyped              ;
+; LATENCY                                        ; 0          ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped              ;
+; USE_EAB                                        ; OFF        ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped              ;
+; CBXI_PARAMETER                                 ; mult_a8t   ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped              ;
++------------------------------------------------+------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bcdToBinary:comb_40|lpm_mult:Mult0 ;
++------------------------------------------------+------------+-----------------------+
+; Parameter Name                                 ; Value      ; Type                  ;
++------------------------------------------------+------------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 4          ; Untyped               ;
+; LPM_WIDTHB                                     ; 7          ; Untyped               ;
+; LPM_WIDTHP                                     ; 11         ; Untyped               ;
+; LPM_WIDTHR                                     ; 11         ; Untyped               ;
+; LPM_WIDTHS                                     ; 1          ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped               ;
+; LPM_PIPELINE                                   ; 0          ; Untyped               ;
+; LATENCY                                        ; 0          ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped               ;
+; USE_EAB                                        ; OFF        ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped               ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped               ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped               ;
++------------------------------------------------+------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bcdToBinary:comb_41|lpm_mult:Mult0 ;
++------------------------------------------------+------------+-----------------------+
+; Parameter Name                                 ; Value      ; Type                  ;
++------------------------------------------------+------------+-----------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE        ;
+; LPM_WIDTHA                                     ; 4          ; Untyped               ;
+; LPM_WIDTHB                                     ; 7          ; Untyped               ;
+; LPM_WIDTHP                                     ; 11         ; Untyped               ;
+; LPM_WIDTHR                                     ; 11         ; Untyped               ;
+; LPM_WIDTHS                                     ; 1          ; Untyped               ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped               ;
+; LPM_PIPELINE                                   ; 0          ; Untyped               ;
+; LATENCY                                        ; 0          ; Untyped               ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped               ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped               ;
+; USE_EAB                                        ; OFF        ; Untyped               ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped               ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped               ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped               ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K   ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped               ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped               ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped               ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped               ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped               ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped               ;
++------------------------------------------------+------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                             ;
++---------------------------------------+------------------------------------+
+; Name                                  ; Value                              ;
++---------------------------------------+------------------------------------+
+; Number of entity instances            ; 6                                  ;
+; Entity Instance                       ; calculator:comb_42|lpm_mult:Mult0  ;
+;     -- LPM_WIDTHA                     ; 11                                 ;
+;     -- LPM_WIDTHB                     ; 11                                 ;
+;     -- LPM_WIDTHP                     ; 22                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; calculator:comb_42|lpm_mult:Mult1  ;
+;     -- LPM_WIDTHA                     ; 11                                 ;
+;     -- LPM_WIDTHB                     ; 11                                 ;
+;     -- LPM_WIDTHP                     ; 22                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; calculator:comb_42|lpm_mult:Mult2  ;
+;     -- LPM_WIDTHA                     ; 11                                 ;
+;     -- LPM_WIDTHB                     ; 11                                 ;
+;     -- LPM_WIDTHP                     ; 22                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; calculator:comb_42|lpm_mult:Mult3  ;
+;     -- LPM_WIDTHA                     ; 11                                 ;
+;     -- LPM_WIDTHB                     ; 11                                 ;
+;     -- LPM_WIDTHP                     ; 22                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                 ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; bcdToBinary:comb_40|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 4                                  ;
+;     -- LPM_WIDTHB                     ; 7                                  ;
+;     -- LPM_WIDTHP                     ; 11                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; bcdToBinary:comb_41|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 4                                  ;
+;     -- LPM_WIDTHB                     ; 7                                  ;
+;     -- LPM_WIDTHP                     ; 11                                 ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                           ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
++---------------------------------------+------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "upcounter:comb_10" ;
++--------+-------+----------+-------------------+
+; Port   ; Type  ; Severity ; Details           ;
++--------+-------+----------+-------------------+
+; Resetn ; Input ; Info     ; Stuck at VCC      ;
++--------+-------+----------+-------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 12.0 Build 178 05/31/2012 SJ Full Version
+    Info: Processing started: Sun Oct 14 23:41:45 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MiniProject -c MiniProject
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file pushbutton.v
+    Info (12023): Found entity 1: pushbutton
+Info (12021): Found 1 design units, including 1 entities, in source file pulsegenerator.v
+    Info (12023): Found entity 1: pulseGenerator
+Info (12021): Found 1 design units, including 1 entities, in source file bcdregister.v
+    Info (12023): Found entity 1: bcdRegister
+Info (12021): Found 1 design units, including 1 entities, in source file upcounter.v
+    Info (12023): Found entity 1: upcounter
+Info (12021): Found 1 design units, including 1 entities, in source file seg_7.v
+    Info (12023): Found entity 1: seg7
+Info (12021): Found 1 design units, including 1 entities, in source file operator.v
+    Info (12023): Found entity 1: operatorRegister
+Info (12021): Found 1 design units, including 1 entities, in source file operand_2_register.v
+    Info (12023): Found entity 1: operand_2_register
+Info (12021): Found 1 design units, including 1 entities, in source file operand_1_register.v
+    Info (12023): Found entity 1: operand_1_register
+Info (12021): Found 1 design units, including 1 entities, in source file miniproject.v
+    Info (12023): Found entity 1: miniProject
+Info (12021): Found 1 design units, including 1 entities, in source file keypad.v
+    Info (12023): Found entity 1: keypad
+Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider_1000.v
+    Info (12023): Found entity 1: frequencydivider500
+Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider_10.v
+    Info (12023): Found entity 1: frequencydivider10
+Info (12021): Found 1 design units, including 1 entities, in source file flipflop.v
+    Info (12023): Found entity 1: flipflop
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer
+Info (12021): Found 1 design units, including 1 entities, in source file calculator.v
+    Info (12023): Found entity 1: calculator
+Info (12021): Found 1 design units, including 1 entities, in source file bcdtobinary.v
+    Info (12023): Found entity 1: bcdToBinary
+Info (12021): Found 1 design units, including 1 entities, in source file 2_to_4_decoder.v
+    Info (12023): Found entity 1: decoder2to4
+Info (12021): Found 1 design units, including 1 entities, in source file binarytobcd.v
+    Info (12023): Found entity 1: binaryToBcd
+Info (12021): Found 1 design units, including 1 entities, in source file displaymux.v
+    Info (12023): Found entity 1: displayMux
+Info (12021): Found 1 design units, including 1 entities, in source file statemachine.v
+    Info (12023): Found entity 1: stateMachine
+Info (12021): Found 1 design units, including 1 entities, in source file clear.v
+    Info (12023): Found entity 1: clear
+Info (12021): Found 1 design units, including 1 entities, in source file reset.v
+    Info (12023): Found entity 1: resetAll
+Info (12021): Found 1 design units, including 1 entities, in source file memorystore.v
+    Info (12023): Found entity 1: memoryStore
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(20): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(21): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(28): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(29): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(34): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(35): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(47): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(49): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(55): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(61): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(69): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(76): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(86): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(87): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(88): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(98): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(99): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(104): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(106): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(118): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(120): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(125): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(126): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(127): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(128): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(129): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(130): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at miniProject.v(131): instance has no name
+Info (12127): Elaborating entity "miniProject" for the top level hierarchy
+Warning (10034): Output port "LEDR[17..12]" at miniProject.v(7) has no driver
+Info (12128): Elaborating entity "frequencydivider500" for hierarchy "frequencydivider500:comb_3"
+Info (12128): Elaborating entity "frequencydivider10" for hierarchy "frequencydivider10:comb_4"
+Info (12128): Elaborating entity "upcounter" for hierarchy "upcounter:comb_10"
+Info (12128): Elaborating entity "decoder2to4" for hierarchy "decoder2to4:comb_11"
+Info (12128): Elaborating entity "resetAll" for hierarchy "resetAll:comb_12"
+Info (12128): Elaborating entity "clear" for hierarchy "clear:comb_13"
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:comb_18"
+Info (12128): Elaborating entity "flipflop" for hierarchy "debouncer:comb_18|flipflop:flipflop0"
+Info (12128): Elaborating entity "keypad" for hierarchy "keypad:comb_19"
+Info (12128): Elaborating entity "pushbutton" for hierarchy "pushbutton:comb_20"
+Info (12128): Elaborating entity "pulseGenerator" for hierarchy "pulseGenerator:comb_21"
+Info (12128): Elaborating entity "bcdRegister" for hierarchy "bcdRegister:comb_22"
+Info (12128): Elaborating entity "memoryStore" for hierarchy "memoryStore:comb_35"
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(15): variable "pushbuttons" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(15): variable "pushButtonSignal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(17): variable "digit3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(17): variable "digit2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(17): variable "digit1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(19): variable "pushbuttons" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at memoryStore.v(19): variable "pushButtonSignal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at memoryStore.v(12): inferring latch(es) for variable "memoryNumber", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "memoryNumber[0]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[1]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[2]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[3]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[4]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[5]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[6]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[7]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[8]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[9]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[10]" at memoryStore.v(19)
+Info (10041): Inferred latch for "memoryNumber[11]" at memoryStore.v(19)
+Info (12128): Elaborating entity "operand_1_register" for hierarchy "operand_1_register:comb_37"
+Info (12128): Elaborating entity "operand_2_register" for hierarchy "operand_2_register:comb_38"
+Info (12128): Elaborating entity "operatorRegister" for hierarchy "operatorRegister:comb_39"
+Warning (10235): Verilog HDL Always Construct warning at operator.v(12): variable "stateEncoder" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(12): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(14): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(16): variable "stateEncoder" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(16): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(18): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(20): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at operator.v(22): variable "number" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at operator.v(9): inferring latch(es) for variable "selectedOperator", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "selectedOperator[0]" at operator.v(9)
+Info (10041): Inferred latch for "selectedOperator[1]" at operator.v(9)
+Info (10041): Inferred latch for "selectedOperator[2]" at operator.v(9)
+Info (10041): Inferred latch for "selectedOperator[3]" at operator.v(9)
+Info (12128): Elaborating entity "bcdToBinary" for hierarchy "bcdToBinary:comb_40"
+Warning (10240): Verilog HDL Always Construct warning at bcdToBinary.v(6): inferring latch(es) for variable "binaryOperand", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "binaryOperand[0]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[1]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[2]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[3]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[4]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[5]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[6]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[7]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[8]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[9]" at bcdToBinary.v(6)
+Info (10041): Inferred latch for "binaryOperand[10]" at bcdToBinary.v(6)
+Info (12128): Elaborating entity "calculator" for hierarchy "calculator:comb_42"
+Info (12128): Elaborating entity "binaryToBcd" for hierarchy "binaryToBcd:comb_43"
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(39): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(37): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(35): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(33): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(31): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at binaryToBcd.v(29): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "stateMachine" for hierarchy "stateMachine:comb_44"
+Info (12128): Elaborating entity "displayMux" for hierarchy "displayMux:comb_45"
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(26): variable "operand1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(32): variable "operand1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(33): variable "operand1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(34): variable "operand1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(44): variable "operand2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(50): variable "operand2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(51): variable "operand2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(52): variable "operand2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(58): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(64): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(65): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(66): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(67): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(68): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at displayMux.v(69): variable "bcdAnswer" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at displayMux.v(18): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut6", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut5", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut4", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut3", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at displayMux.v(17): inferring latch(es) for variable "muxOut0", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "muxOut0[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut0[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut0[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut0[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut1[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut1[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut1[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut1[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut2[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut2[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut2[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut2[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut3[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut3[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut3[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut3[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut4[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut4[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut4[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut4[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut5[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut5[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut5[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut5[3]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut6[0]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut6[1]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut6[2]" at displayMux.v(17)
+Info (10041): Inferred latch for "muxOut6[3]" at displayMux.v(17)
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:comb_53"
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:comb_42|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:comb_42|Mult1"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:comb_42|Mult2"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:comb_42|Mult3"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bcdToBinary:comb_40|Mult0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "bcdToBinary:comb_41|Mult0"
+Info (12130): Elaborated megafunction instantiation "calculator:comb_42|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "calculator:comb_42|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_a8t.tdf
+    Info (12023): Found entity 1: mult_a8t
+Info (12130): Elaborated megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "bcdToBinary:comb_40|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0"
+Info (12131): Elaborated megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "bcdToBinary:comb_40|lpm_mult:Mult0"
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "displayMux:comb_45|muxOut6[3]" merged with LATCH primitive "displayMux:comb_45|muxOut6[1]"
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch memoryStore:comb_35|memoryNumber[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal pushbutton:comb_20|pushbuttons[0]
+Warning (13012): Latch displayMux:comb_45|muxOut0[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut0[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut0[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut0[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut1[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut1[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut1[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut1[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut2[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut2[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut2[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut2[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut3[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut3[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut3[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut3[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut4[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut4[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut4[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut4[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut5[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut5[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut5[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut5[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch displayMux:comb_45|muxOut6[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal operatorRegister:comb_39|selectedOperator[0]
+Warning (13012): Latch operatorRegister:comb_39|selectedOperator[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:comb_19|number[0]
+Warning (13012): Latch operatorRegister:comb_39|selectedOperator[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:comb_19|number[1]
+Warning (13012): Latch operatorRegister:comb_39|selectedOperator[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:comb_19|number[2]
+Warning (13012): Latch operatorRegister:comb_39|selectedOperator[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad:comb_19|number[3]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut0[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut0[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut0[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut0[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut1[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut1[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut1[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut1[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut2[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut2[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut2[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut2[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut3[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut3[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut3[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut3[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut4[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut4[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut4[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut4[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut5[0]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut5[1]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut5[2]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut5[3]" is permanently enabled
+Warning (14026): LATCH primitive "displayMux:comb_45|muxOut6[1]" is permanently enabled
+Info (144001): Generated suppressed messages file D:/temp 371/MiniProject.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+Info (21057): Implemented 853 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 27 input pins
+    Info (21059): Implemented 78 output pins
+    Info (21061): Implemented 740 logic cells
+    Info (21062): Implemented 8 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 215 warnings
+    Info: Peak virtual memory: 511 megabytes
+    Info: Processing ended: Sun Oct 14 23:41:49 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/temp 371/MiniProject.map.smsg.
+
+

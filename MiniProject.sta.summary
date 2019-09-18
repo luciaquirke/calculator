@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'frequencydivider500:comb_3|scaledClock'
+Slack : -11.953
+TNS   : -363.864
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.648
+TNS   : -94.450
+
+Type  : Slow Model Setup 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : -1.383
+TNS   : -15.606
+
+Type  : Slow Model Setup 'frequencydivider10:comb_4|scaledClock'
+Slack : -0.514
+TNS   : -0.514
+
+Type  : Slow Model Setup 'keypad:comb_19|number[0]'
+Slack : 1.780
+TNS   : 0.000
+
+Type  : Slow Model Hold 'keypad:comb_19|number[0]'
+Slack : -3.977
+TNS   : -9.708
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.536
+TNS   : -5.069
+
+Type  : Slow Model Hold 'frequencydivider500:comb_3|scaledClock'
+Slack : -1.784
+TNS   : -29.397
+
+Type  : Slow Model Hold 'frequencydivider10:comb_4|scaledClock'
+Slack : 0.530
+TNS   : 0.000
+
+Type  : Slow Model Hold 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : 1.052
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -57.380
+
+Type  : Slow Model Minimum Pulse Width 'frequencydivider500:comb_3|scaledClock'
+Slack : -0.500
+TNS   : -73.000
+
+Type  : Slow Model Minimum Pulse Width 'frequencydivider10:comb_4|scaledClock'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Slow Model Minimum Pulse Width 'keypad:comb_19|number[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'frequencydivider500:comb_3|scaledClock'
+Slack : -4.048
+TNS   : -124.028
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.717
+TNS   : -16.936
+
+Type  : Fast Model Setup 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : -0.432
+TNS   : -4.644
+
+Type  : Fast Model Setup 'frequencydivider10:comb_4|scaledClock'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast Model Setup 'keypad:comb_19|number[0]'
+Slack : 1.345
+TNS   : 0.000
+
+Type  : Fast Model Hold 'keypad:comb_19|number[0]'
+Slack : -2.062
+TNS   : -4.918
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.580
+TNS   : -3.158
+
+Type  : Fast Model Hold 'frequencydivider500:comb_3|scaledClock'
+Slack : -1.224
+TNS   : -28.108
+
+Type  : Fast Model Hold 'frequencydivider10:comb_4|scaledClock'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast Model Hold 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : 0.882
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -57.380
+
+Type  : Fast Model Minimum Pulse Width 'frequencydivider500:comb_3|scaledClock'
+Slack : -0.500
+TNS   : -73.000
+
+Type  : Fast Model Minimum Pulse Width 'frequencydivider10:comb_4|scaledClock'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Minimum Pulse Width 'keypad:comb_19|number[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'pulseGenerator:comb_21|pushButtonSignal'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

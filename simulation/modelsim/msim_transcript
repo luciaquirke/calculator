@@ -1,0 +1,41 @@
+# Reading C:/Altera/12.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do MiniProject_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\Altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Altera\12.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/371Friday/temp\ 371 {H:/371Friday/temp 371/miniproject.v}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module miniproject
+# ** Warning: H:/371Friday/temp 371/miniproject.v(17): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: H:/371Friday/temp 371/miniproject.v(18): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# -- Compiling module frequencyDivider
+# 
+# Top level modules:
+# 	miniproject
+# vlog -vlog01compat -work work +incdir+H:/371Friday/temp\ 371 {H:/371Friday/temp 371/upcounter.v}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module upcounter
+# 
+# Top level modules:
+# 	upcounter
+# vlog -vlog01compat -work work +incdir+H:/371Friday/temp\ 371 {H:/371Friday/temp 371/keypad.v}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module keypad
+# 
+# Top level modules:
+# 	keypad
+# vlog -vlog01compat -work work +incdir+H:/371Friday/temp\ 371 {H:/371Friday/temp 371/2to4decoder.v}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module decoder2to4
+# 
+# Top level modules:
+# 	decoder2to4
+# 
+#  

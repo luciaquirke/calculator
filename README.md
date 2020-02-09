@@ -4,12 +4,12 @@ Simple FPGA Calculator written in the hardware description language Verilog usin
 
 The calculator performs:
 
-Addition, subtraction, and multiplication of two signed decimal numbers of up to three digits each.
+* Addition, subtraction, and multiplication of two signed decimal numbers of up to three digits each.
 
-Memory store (MS), memory recall (MR) and memory clear (MC) operations on one decimal number.
+* Memory store (MS), memory recall (MR) and memory clear (MC) operations on one decimal number.
 
-A backspace operation.
+* A backspace operation.
 
-A clear operation.
+* A clear operation.
 
-A reset operation.
+* A reset operation.
